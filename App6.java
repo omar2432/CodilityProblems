@@ -1,32 +1,26 @@
 public class App6 {
-    public static void main(String[] args) {
-        
+    public static void main(String[] args) {   }
 
-        int[] A={5, -10, 7, 3, -2, 1, -8, 4, 9, -6, 2, -4, 6, -1, 0};
-
-        int N =A.length;
-        int sumlift=A[0];
-        int sumright=A[N-1];
-
-        if(N==2){
-            System.out.println(Math.abs(sumlift-sumright));
-            //return Math.abs(sumlift-sumright);
-        }
-
-        int i=1;
-        int j=N-2;
-
-        while(i<=j){
-            if(Math.abs(sumlift-(sumright+A[j]))<Math.abs(sumlift+A[i]-sumright)){
-                sumright+= A[j];
-                j--;
-            }
-            else{
-                sumlift+= A[i];
-                i++;
-            }            
-        }
-        System.out.println(Math.abs(sumlift-sumright));
-            //return Math.abs(sumlift-sumright);
-    }
 }
+
+        class Solution {
+            public int solution(int[] A) {
+                int n = A.length;
+                int sum = 0;
+                for (int i = 0; i < n; i++) {
+                    sum += A[i];
+                }
+                int leftSum = 0;
+                int rightSum = sum;
+                int minDiff = Integer.MAX_VALUE;
+                for (int i = 0; i < n-1; i++) {
+                    leftSum += A[i];
+                    rightSum -= A[i];
+                    int diff = Math.abs(leftSum - rightSum);
+                    if (diff < minDiff) {
+                        minDiff = diff;
+                    }
+                }
+                return minDiff;
+            }
+        }
