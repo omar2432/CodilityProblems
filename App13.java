@@ -14,11 +14,14 @@ public class App13 {
 class Solution {
     public int[] solution(String S, int[] P, int[] Q) {
         int n = S.length();
+        // initializing int arrays A,C,G,T
         int[] A = new int[n+1];
         int[] C = new int[n+1];
         int[] G = new int[n+1];
         int[] T = new int[n+1];
-        
+
+        // Fill arrays with 1 if char == to array name else fill 0
+
         for (int i = 0; i < n; i++) {
             A[i+1] = A[i] + (S.charAt(i) == 'A' ? 1 : 0);
             C[i+1] = C[i] + (S.charAt(i) == 'C' ? 1 : 0);
@@ -28,6 +31,8 @@ class Solution {
         
         int m = P.length;
         int[] result = new int[m];
+
+        //
         
         for (int k = 0; k < m; k++) {
             int p = P[k];
