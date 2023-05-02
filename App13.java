@@ -1,10 +1,9 @@
-// Importing java.util.Arrays to be able to use Arrays.fill() function
-
 import java.util.Arrays;
 
 public class App13 {
     public static void main(String[] args) {
-        System.out.println("null");
+
+// intializing Sting S, Arrays P and Q
 
         String S="CAGCCTA";
         int [] P={2,5,0};
