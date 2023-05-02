@@ -1,3 +1,5 @@
+// Importing java.util.Arrays to be able to use Arrays.fill() function
+
 import java.util.Arrays;
 
 public class App13 {
