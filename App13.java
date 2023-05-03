@@ -33,7 +33,7 @@ class Solution {
         int m = P.length;
         int[] result = new int[m];
 
-        //  Filling the result array by looping m times
+
         
         for (int k = 0; k < m; k++) {
             int p = P[k];
