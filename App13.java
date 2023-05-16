@@ -34,7 +34,7 @@ class Solution {
         int[] result = new int[m];
 
 
-        // Looping over te arrays if array A had an element between p and q then the result is 1
+        // Looping over the arrays if array A had an element between p and q then the result is 1
  
         for (int k = 0; k < m; k++) {
             int p = P[k];
