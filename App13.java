@@ -35,6 +35,7 @@ class Solution {
 
 
         // Looping over the arrays if array A had an element between p and q then the result is 1
+	// As array A represents the occurances of char A
  
         for (int k = 0; k < m; k++) {
             int p = P[k];
