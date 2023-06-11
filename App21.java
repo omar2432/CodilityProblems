@@ -19,8 +19,15 @@ public class App21 {
             if(A[i]<buy){
                 buy=A[i];
                 sell=0;
-            }else if(){}
+            }else if(A[i]>buy && A[i]>sell){
+                sell=A[i];
+                currentProfit=sell-buy;
+                if(currentProfit>maxProfit){
+                    maxProfit=currentProfit;                    
+                }
+            }
         }
+        return maxProfit;
     }
     
 }
