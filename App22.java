@@ -6,13 +6,20 @@ public class App22 {
     
 
     public int solution(int N) {
-        // Implement your solution here
-        int count=1;
-        for(int i=1;i<N/2;i++){
-            if(N%i ==0){
-                count++;
+        int count = 0;
+        
+        // Iterate through numbers from 1 to sqrt(N)
+        for (int i = 1; i * i <= N; i++) {
+            if (N % i == 0) {
+                // If i is a factor, count both i and its corresponding factor
+                if (i * i == N) {
+                    count++;
+                } else {
+                    count += 2;
+                }
             }
         }
+        
         return count;
     }
 
